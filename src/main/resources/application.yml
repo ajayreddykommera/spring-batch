@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: spring-batch
+  datasource:
+    url: jdbc:mysql://localhost:3306/file-handling
+    username: root
+    password: rootroot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    format_sql: true
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+azure:
+  storage:
+    account-name: devstoreaccount1
+    account-key: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+    blob-endpoint: http://127.0.0.1:10000/devstoreaccount1;
+    table-endpoint: http://127.0.0.1:10002/devstoreaccount1
+    connection-string: AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;DefaultEndpointsProtocol=http;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;TableEndpoint=http://127.0.0.1:10002/devstoreaccount1;
+    container_name: test
